@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost:3306
--- 產生時間： 2023-04-06 03:40:00
+-- 產生時間： 2023-04-06 08:07:10
 -- 伺服器版本： 5.7.24
 -- PHP 版本： 8.0.1
 
@@ -32,6 +32,7 @@ USE `eeit58group3`;
 CREATE TABLE `activity` (
   `id` smallint(5) NOT NULL,
   `host` smallint(6) NOT NULL,
+  `activityTitle` varchar(50) NOT NULL,
   `description` varchar(10000) NOT NULL,
   `location` varchar(100) NOT NULL,
   `activityTime` date NOT NULL,

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost:3306
--- 產生時間： 2023-04-06 08:07:10
+-- 產生時間： 2023-04-07 08:25:59
 -- 伺服器版本： 5.7.24
 -- PHP 版本： 8.0.1
 
@@ -44,7 +44,8 @@ CREATE TABLE `activity` (
   `level` varchar(8) NOT NULL,
   `participataion` varchar(10000) NOT NULL,
   `expired` char(1) NOT NULL,
-  `postTime` datetime NOT NULL
+  `postTime` datetime NOT NULL,
+  `pic` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -92,7 +93,7 @@ CREATE TABLE `member` (
   `id` smallint(5) NOT NULL,
   `account` varchar(100) NOT NULL,
   `password` varchar(10000) NOT NULL,
-  `Icon` blob,
+  `Icon` varchar(100) DEFAULT NULL,
   `memberName` varchar(100) NOT NULL,
   `phoneNumber` char(10) NOT NULL,
   `gender` char(1) DEFAULT NULL,

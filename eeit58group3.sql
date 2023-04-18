@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： localhost:3306
--- 產生時間： 2023-04-07 08:25:59
+-- 產生時間： 2023-04-18 01:09:43
 -- 伺服器版本： 5.7.24
 -- PHP 版本： 8.0.1
 
@@ -29,13 +29,14 @@ USE `eeit58group3`;
 -- 資料表結構 `activity`
 --
 
+DROP TABLE IF EXISTS `activity`;
 CREATE TABLE `activity` (
   `id` smallint(5) NOT NULL,
   `host` smallint(6) NOT NULL,
   `activityTitle` varchar(50) NOT NULL,
   `description` varchar(10000) NOT NULL,
   `location` varchar(100) NOT NULL,
-  `activityTime` date NOT NULL,
+  `activityTime` datetime NOT NULL,
   `fee` varchar(100) NOT NULL,
   `min` smallint(6) NOT NULL,
   `max` smallint(6) NOT NULL,
@@ -54,6 +55,7 @@ CREATE TABLE `activity` (
 -- 資料表結構 `activity_add`
 --
 
+DROP TABLE IF EXISTS `activity_add`;
 CREATE TABLE `activity_add` (
   `id` smallint(6) NOT NULL,
   `memberId` smallint(6) NOT NULL
@@ -65,6 +67,7 @@ CREATE TABLE `activity_add` (
 -- 資料表結構 `ban_list`
 --
 
+DROP TABLE IF EXISTS `ban_list`;
 CREATE TABLE `ban_list` (
   `memberId` smallint(6) NOT NULL,
   `start` date DEFAULT NULL,
@@ -77,6 +80,7 @@ CREATE TABLE `ban_list` (
 -- 資料表結構 `gym`
 --
 
+DROP TABLE IF EXISTS `gym`;
 CREATE TABLE `gym` (
   `gymName` varchar(100) NOT NULL,
   `Address` varchar(100) NOT NULL,
@@ -89,6 +93,7 @@ CREATE TABLE `gym` (
 -- 資料表結構 `member`
 --
 
+DROP TABLE IF EXISTS `member`;
 CREATE TABLE `member` (
   `id` smallint(5) NOT NULL,
   `account` varchar(100) NOT NULL,
@@ -106,6 +111,7 @@ CREATE TABLE `member` (
 -- 資料表結構 `zone`
 --
 
+DROP TABLE IF EXISTS `zone`;
 CREATE TABLE `zone` (
   `city` varchar(50) NOT NULL,
   `dist` varchar(50) NOT NULL
